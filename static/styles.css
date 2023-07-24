@@ -1,0 +1,198 @@
+/* Загальні стилі для всіх сторінок */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Стилі для головної сторінки */
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Стилі для форм реєстрації та входу */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стилі для кнопок профілю */
+.profile-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стилі для кнопок входу/реєстрації у верхньому правому куті */
+.login-register-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-register-buttons a {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+/* Стилі для головної секції з кнопкою профілю */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #333;
+    padding: 35px;
+}
+
+
+
+/* Стилі для випадаючого меню "Профіль" */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.dropbtn:hover {
+    background-color: #444;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 100px;
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Стилі для відображення публікацій */
+.topics {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.topic {
+    position: relative;
+    background-color: orange;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+
+.topic h3 {
+    color: white; /* Білий колір заголовку */
+    margin-bottom: 10px;
+}
+
+.topic p {
+    color: white; /* Білий колір тексту */
+    margin-top: 30px; /* Відступ вгору */
+}
+
+.author-date {
+    color: white;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Стилізація кнопки "Видалити" */
+.delete-btn {
+    position: absolute; /* Позиціонуємо кнопку відносно контейнера .topic */
+    top: 10px;
+    right: 10px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background-color: orange;
+    border-color: orange;
+    color: white;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форум</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        {% if username %}
+        <div class="dropdown">
+            <button class="dropbtn">{{ username }}</button>
+            <div class="dropdown-content">
+                <a href="/create_topic">Створити публікацію</a>
+                <a href="/logout">Вийти</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="login-register-buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Меню</button>
+                <div class="dropdown-content">
+                    <a href="/login">Авторизація</a>
+                    <a href="/register">Реєстрація</a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="topics">
+        {% for topic in topics[::-1] %}
+        <div class="topic">
+            <h3>{{ topic[1] }}</h3>
+            <p>{{ topic[2] }}</p>
+            <p class="author-date">Автор: {{ topic[5] }}, Опубліковано: {{ topic[4] }}</p>
+            {% if username == topic[5] %}
+            <form action="{{ url_for('delete_topic', topic_id=topic[0]) }}" method="post">
+                <button class="delete-btn" type="submit">Видалити</button>
+            </form>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Решта коду з головної сторінки -->
+</body>
+</html>

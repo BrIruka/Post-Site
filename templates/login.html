@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вхід</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Вхід у свій профіль</h2>
+        <form method="post" action="/login">
+            <label for="username">Логін:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Увійти">
+        </form>
+        <a href="/">На головну</a>
+    </div>
+</body>
+</html>

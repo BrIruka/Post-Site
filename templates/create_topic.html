@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Створення нової теми</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Створення нової теми</h2>
+        <form method="post" action="/create_topic">
+            <label for="title">Заголовок:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">Контент:</label>
+            <textarea id="content" name="content" required></textarea>
+            <input type="submit" value="Створити тему">
+        </form>
+        <a href="/">На головну</a>
+    </div>
+</body>
+</html>
